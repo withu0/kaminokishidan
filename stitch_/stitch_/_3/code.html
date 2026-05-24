@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ja" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700;900&amp;family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-tint": "#e9c349",
+              "on-primary": "#3c2f00",
+              "surface-container-high": "#262a31",
+              "on-surface": "#dfe2eb",
+              "on-error-container": "#ffdad6",
+              "surface-bright": "#353940",
+              "tertiary-fixed-dim": "#b8c7e5",
+              "primary-fixed-dim": "#e9c349",
+              "on-primary-fixed-variant": "#574500",
+              "primary": "#e9c349",
+              "error": "#ffb4ab",
+              "inverse-surface": "#dfe2eb",
+              "on-secondary": "#2f3131",
+              "on-background": "#dfe2eb",
+              "error-container": "#93000a",
+              "on-surface-variant": "#c5c6cd",
+              "on-primary-fixed": "#241a00",
+              "primary-fixed": "#ffe088",
+              "secondary-fixed-dim": "#c6c6c6",
+              "on-secondary-fixed": "#1a1c1c",
+              "surface-container-lowest": "#0a0e14",
+              "surface-container-low": "#181c22",
+              "inverse-on-surface": "#2d3137",
+              "secondary-fixed": "#e3e2e2",
+              "surface-container-highest": "#31353c",
+              "surface": "#10141a",
+              "primary-container": "#201800",
+              "tertiary": "#b8c7e5",
+              "secondary-container": "#484949",
+              "surface-container": "#1c2026",
+              "secondary": "#c6c6c6",
+              "outline": "#8f9097",
+              "on-tertiary-container": "#74829d",
+              "surface-variant": "#31353c",
+              "on-error": "#690005",
+              "tertiary-container": "#09192f",
+              "on-primary-container": "#9e7e00",
+              "background": "#10141a",
+              "on-tertiary-fixed": "#0c1c32",
+              "tertiary-fixed": "#d5e3ff",
+              "surface-dim": "#10141a",
+              "inverse-primary": "#735c00",
+              "outline-variant": "#44474d",
+              "on-tertiary-fixed-variant": "#394760",
+              "on-secondary-container": "#b8b8b8",
+              "on-tertiary": "#223148",
+              "on-secondary-fixed-variant": "#464747"
+            },
+            fontFamily: {
+              "serif": ["Noto Serif JP", "serif"],
+              "sans": ["Manrope", "sans-serif"],
+              "headline": ["Noto Serif JP", "serif"],
+              "body": ["Manrope", "sans-serif"],
+              "label": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .knights-line {
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, #e9c349 50%, transparent 100%);
+            width: 100%;
+        }
+        .glass-panel {
+            background: rgba(24, 28, 34, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        .classified-mask {
+            mask-image: radial-gradient(circle, black 40%, transparent 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body overflow-x-hidden">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#10141a]/80 backdrop-blur-md flex justify-between items-center px-8 py-4 max-w-full border-b border-primary/10">
+<div class="font-serif text-2xl font-bold tracking-widest text-[#e9c349]">THE SOVEREIGN ORDER</div>
+<div class="hidden md:flex gap-10 items-center">
+<a class="text-[#c6c6c6] hover:text-[#e9c349] transition-colors uppercase tracking-[0.05em] font-medium text-sm" href="#">RECOGNITION</a>
+<a class="text-[#c6c6c6] hover:text-[#e9c349] transition-colors uppercase tracking-[0.05em] font-medium text-sm" href="#">CHIVALRY</a>
+<a class="text-[#c6c6c6] hover:text-[#e9c349] transition-colors uppercase tracking-[0.05em] font-medium text-sm" href="#">CHRONICLES</a>
+<a class="text-[#e9c349] border-b-2 border-[#e9c349] pb-1 uppercase tracking-[0.05em] font-medium text-sm" href="#">MEMBERS</a>
+</div>
+<button class="bg-[#e9c349] text-[#3c2f00] px-6 py-2 font-bold tracking-wider hover:scale-105 transition-transform duration-300 active:scale-95">
+        団員を志す
+    </button>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative min-h-[614px] flex flex-col items-center justify-center text-center px-6 py-24 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-b from-surface/20 via-surface to-surface"></div>
+<img alt="Divine light" class="w-full h-full object-cover opacity-40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZEAGNg_yveCc-4jv7prZrRNnPzeRRSUl6XZVMPD3L1WfNvfMXa5n3qr84wmi6erJjFu6FK2mQ_rBn-9t8bKLcr5_-y4Scyy9mw7wbk5IG4Z20G0U_vq8Qp9pXlvd2TN0tP0kWJg9sgsx4XteWzvsVXmo-hzlU9YBLJ0gx_ZwgwXral_1rliIpewYMntNLLhVUM25DpQ2cnGFVwa9jakEY-Qm_bM3sKuR-K6C35V9RDu9EFJLE45JrWMJ0pBZ6LEgAoBRzGft1Z6e4"/>
+</div>
+<div class="relative z-10 max-w-4xl">
+<span class="font-sans font-bold tracking-[0.5em] text-primary mb-4 block uppercase text-sm">Sacred Guardians</span>
+<h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-on-surface leading-tight">
+                ORDER MEMBERS <br/>
+<span class="text-primary italic">聖域の守護者たち</span>
+</h1>
+<div class="mt-12 flex justify-center">
+<div class="knights-line max-w-xs"></div>
+</div>
+</div>
+</section>
+<!-- The Sword: Leader Section -->
+<section class="py-24 px-6 md:px-12 lg:px-24 bg-surface">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
+<div class="w-full lg:w-1/2 relative group">
+<div class="absolute -inset-4 border border-primary/20 transition-all duration-500 group-hover:inset-0 group-hover:border-primary/50"></div>
+<div class="aspect-[4/5] overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700 bg-surface-container-highest">
+<img alt="The Leader Hikaru" class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXknoyyvOMtK5Y6uiwVoCYETFLx2FINI669BBK_kB7Z8nmdzA2wJuoskpDN7w6oa1qKL2Jj344WvCPLouI3CoI9pNTYSoIzJXEcudnkBQIULCsnGi7fdLAVUZb5yqCZcIAXS4eiSbINV0dEKexeHZ7eSPkYnOaERfyVUNh9SG6CuQkW_nk4IpATjfAwTtHAsXijn5SYVE-_5CM3TabBxPSd_7zaPrjurlnR_cUNMETnvlUChrYVXThRb5FE4DqVPpBclJsRwv0Cjhw"/>
+</div>
+</div>
+<div class="w-full lg:w-1/2 space-y-12">
+<div>
+<p class="font-serif text-2xl font-bold text-primary mb-2">団長 / THE SWORD</p>
+<h2 class="font-serif text-5xl md:text-6xl font-bold leading-none tracking-tighter mb-4 text-on-surface">ヒカル</h2>
+<div class="h-1 w-24 bg-primary"></div>
+</div>
+<div class="space-y-8">
+<div class="flex gap-6 items-start">
+<span class="text-primary mt-1"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bolt</span></span>
+<p class="font-serif text-xl md:text-2xl leading-relaxed text-on-surface-variant italic">「圧倒的な発信力で新時代を切り拓く。その言葉は雷鳴の如く、停滞した世界に楔を打ち込むものである。」</p>
+</div>
+<div class="flex gap-6 items-start">
+<span class="text-primary mt-1"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">groups</span></span>
+<p class="font-serif text-xl md:text-2xl leading-relaxed text-on-surface-variant italic">「日本最大級のコミュニティを統べる。数多の魂を束ね、一つの大いなる意志へと昇華させる器を持つ。」</p>
+</div>
+<div class="flex gap-6 items-start">
+<span class="text-primary mt-1"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_awesome</span></span>
+<p class="font-serif text-xl md:text-2xl leading-relaxed text-on-surface-variant italic">「既存の価値観を破壊し、新たな秩序を創造する。混沌を恐れず、常に最前線で光輝を放ち続ける覇者である。」</p>
+</div>
+</div>
+<div class="pt-8">
+<button class="border border-outline-variant px-12 py-4 font-bold tracking-widest text-secondary hover:bg-primary hover:text-on-primary hover:border-primary transition-all duration-500 uppercase">
+                        View Chronicle
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Divider -->
+<div class="px-24">
+<div class="knights-line"></div>
+</div>
+<!-- The Shield: Sub-Leader Section -->
+<section class="py-24 px-6 md:px-12 lg:px-24 bg-surface-container-low relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/3 h-full bg-primary/5 blur-[120px] pointer-events-none"></div>
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse gap-16 items-center">
+<div class="w-full lg:w-2/5 relative">
+<div class="aspect-square bg-surface-container-lowest flex items-center justify-center border border-primary/10 overflow-hidden relative group">
+<img alt="The Shield - Higaru" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZnPT6StQwxucWCP_OdQ9qv1Xy0cdOlo4IK0_9xrgezEoayCa4ppSVZMjHGbqjy58vtTqyxE0iku4fKgZldal2HrgRVPyRZmcIa8RrIP5V3lWQjh7hsrzLXYe6KTtm1Mf13N9eB2htj8Dk9g8RQwbkMdsVemse5z9Cab6aw1Qtu0Se-1KlnjjrT-mFyAQmxLI2Ct1TMpHlWg-KgNsviIkU5DKR_OcZK5vRJnW8VIjWX3uowT0C7ay3zcfLMpYKCtQTv6jU7g0-vo9m"/>
+</div>
+</div>
+<div class="w-full lg:w-3/5 space-y-10">
+<div class="space-y-2">
+<p class="font-serif text-primary text-2xl tracking-widest font-bold">副団長 / THE SHIELD</p>
+<h2 class="font-serif text-5xl md:text-7xl font-bold text-on-surface">ヒガル</h2>
+</div>
+<div class="glass-panel p-10 border-l-4 border-primary">
+<p class="font-serif text-2xl md:text-3xl leading-relaxed text-on-surface italic">
+                        正体不明の賢者。騎士団の背後を護り、揺るぎない基盤を構築する存在である。その智慧は深淵の如く、語られぬ真理を以て大業を支え続けている。
+                    </p>
+</div>
+<p class="font-sans text-on-surface-variant text-lg leading-relaxed max-w-2xl">
+                    公にその姿を現すことは稀であるが、彼の不在において騎士団の安定はあり得ない。影の中から光を操る、秩序の真の構築者である。
+                </p>
+</div>
+</div>
+</section>
+<!-- The Strategist: Rice Field -->
+<section class="py-24 px-6 md:px-12 lg:px-24 bg-surface">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
+<div class="w-full lg:w-1/2 relative group">
+<div class="absolute -inset-4 border border-primary/20 transition-all duration-500 group-hover:inset-0 group-hover:border-primary/50"></div>
+<div class="aspect-[4/5] overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700 bg-surface-container-highest">
+<img alt="The Strategist Takumi" class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCO_s7wiLyDjzCeduaAw1FN5rldug_0vXzyrQe9WnI49p5xE2PpOAFe5Y3yKoa8CDWMq9rvzY-0PAOk7KvmJGEISxXLJ_tNDZ5uAl2Txm67B1Z-1vRbwVsVf4xNmrZIV9RxxinXECwlSaCAASfVpVtdjPuJhXGEVIQmPq_0xPjNm-8hjHEsSKxGw_u65K_XAYDHSIWG_QWBLuNUR-Y6WeNv-Faw-WkwN386H1X-JJsydIHIy6X-8HRub47emCFauHTdaQVxErb0EuTF"/>
+</div>
+</div>
+<div class="w-full lg:w-1/2 space-y-12">
+<div>
+<p class="font-serif text-2xl font-bold text-primary mb-2">リーダー / THE STRATEGIST</p>
+<h2 class="font-serif text-5xl md:text-6xl font-bold leading-none tracking-tighter mb-4 text-on-surface">ライス・フィールド</h2>
+<div class="h-1 w-24 bg-primary"></div>
+</div>
+<div class="space-y-8">
+<div class="flex gap-6 items-start">
+<span class="text-primary mt-1"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">lightbulb</span></span>
+<p class="font-serif text-xl md:text-2xl leading-relaxed text-on-surface-variant italic">「ライバー事務所の立ち上げを主導し、瞬く間に売上20億を達成。混沌とした市場から新たな価値を掘り起こす、新規事業のエキスパートである。」</p>
+</div>
+<div class="flex gap-6 items-start">
+<span class="text-primary mt-1"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">explore</span></span>
+<p class="font-serif text-xl md:text-2xl leading-relaxed text-on-surface-variant italic">「その卓越した知略は、騎士団の進むべき航路を黄金の光で照らし出す。不可能を可能に変える戦略の具現者。」</p>
+</div>
+</div>
+<div class="pt-8">
+<button class="border border-outline-variant px-12 py-4 font-bold tracking-widest text-secondary hover:bg-primary hover:text-on-primary hover:border-primary transition-all duration-500 uppercase">
+          View Chronicle
+        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Divider -->
+<div class="px-24">
+<div class="knights-line"></div>
+</div>
+<!-- The Drummer: Pupu -->
+<section class="py-24 px-6 md:px-12 lg:px-24 bg-surface-container-low relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1/3 h-full bg-primary/5 blur-[120px] pointer-events-none"></div>
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse gap-16 items-center">
+<div class="w-full lg:w-2/5 relative">
+<div class="aspect-square bg-surface-container-lowest flex items-center justify-center border border-primary/10 overflow-hidden relative group">
+<img alt="The Drummer - Pupu" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGZDgYNohlN9wAsCnCbCEFPYiOJAIVO_9m5jtVcBapHr-1hhVAyCtyEXr_dcqf8aQ9Gy1lJmV6ffGCl7FIh9Ztp28PcBye_yAmmVKPur3uxhZYM7KHp3wSusBxOctK9yTOnrn8hcHYWirA46nrEJSBqPAGuqtYHwMxWyWXN_Mkkv0qQVOP6bDtw9g8ZMcEm3YOgwNRYUzQqGQb-0pVYcygOS1_vresJgK60weo3crTNBgPwf9AFpp1USLMw3wkbWzmCXJ3tCsCxMZd"/>
+</div>
+</div>
+<div class="w-full lg:w-3/5 space-y-10">
+<div class="space-y-2">
+<p class="font-serif text-primary text-2xl tracking-widest font-bold">鼓笛隊 / THE DRUMMER</p>
+<h2 class="font-serif text-5xl md:text-7xl font-bold text-on-surface">ププ</h2>
+</div>
+<div class="glass-panel p-10 border-l-4 border-primary">
+<p class="font-serif text-2xl md:text-3xl leading-relaxed text-on-surface italic">
+                        「セールスの極致を体現し、最前線で新たな市場を切り拓く。その情熱は軍勢を鼓舞し、不可能を可能にする。」
+                    </p>
+</div>
+<div class="flex gap-6 items-start">
+<span class="text-primary mt-1"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">campaign</span></span>
+<p class="font-serif text-xl md:text-2xl leading-relaxed text-on-surface-variant italic">
+                        「百戦錬磨の経験に基づき、騎士団の価値を世界へ轟かせる、比類なき交渉の体現者。」
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<div class="px-24">
+<div class="knights-line"></div>
+</div>
+<!-- Remaining Members Section -->
+<section class="py-24 px-6 md:px-12 lg:px-24 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16 space-y-4">
+<h3 class="font-serif text-3xl md:text-5xl font-bold text-primary tracking-tight">団員の集結は間近</h3>
+<div class="knights-line max-w-md mx-auto opacity-50"></div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 lg:gap-10">
+<!-- Member Cards -->
+<div class="group relative aspect-[3/4] bg-surface-container border border-outline-variant/30 hover:border-primary/50 transition-all duration-500">
+<div class="absolute inset-0 bg-[#0a0e14] flex flex-col items-center justify-center p-6 text-center space-y-4 overflow-hidden">
+<div class="relative w-24 h-24 mb-4">
+<span class="material-symbols-outlined text-6xl text-primary/20 absolute inset-0 flex items-center justify-center">shield</span>
+<span class="material-symbols-outlined text-4xl text-primary/40 absolute inset-0 flex items-center justify-center animate-pulse">lock</span>
+</div>
+<div class="space-y-2 relative z-10">
+<p class="text-primary font-serif font-bold tracking-widest text-xs uppercase opacity-80">CLASSIFIED</p>
+<p class="text-on-surface font-serif text-lg md:text-xl font-medium tracking-tighter italic">秘匿された魂</p>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-1 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+</div>
+</div>
+<div class="group relative aspect-[3/4] bg-surface-container border border-outline-variant/30 hover:border-primary/50 transition-all duration-500">
+<div class="absolute inset-0 bg-[#0a0e14] flex flex-col items-center justify-center p-6 text-center space-y-4 overflow-hidden">
+<div class="relative w-24 h-24 mb-4">
+<span class="material-symbols-outlined text-6xl text-primary/20 absolute inset-0 flex items-center justify-center">person_off</span>
+<span class="material-symbols-outlined text-4xl text-primary/40 absolute inset-0 flex items-center justify-center animate-pulse">visibility_off</span>
+</div>
+<div class="space-y-2">
+<p class="text-primary font-serif font-bold tracking-widest text-xs uppercase opacity-80">SECRET</p>
+<p class="text-on-surface font-serif text-lg md:text-xl font-medium tracking-tighter italic">静寂の執行者</p>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-1 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+</div>
+</div>
+<div class="group relative aspect-[3/4] bg-surface-container border border-outline-variant/30 hover:border-primary/50 transition-all duration-500">
+<div class="absolute inset-0 bg-[#0a0e14] flex flex-col items-center justify-center p-6 text-center space-y-4 overflow-hidden">
+<div class="relative w-24 h-24 mb-4">
+<span class="material-symbols-outlined text-6xl text-primary/20 absolute inset-0 flex items-center justify-center">security</span>
+<span class="material-symbols-outlined text-4xl text-primary/40 absolute inset-0 flex items-center justify-center animate-pulse">key</span>
+</div>
+<div class="space-y-2">
+<p class="text-primary font-serif font-bold tracking-widest text-xs uppercase opacity-80">CLASSIFIED</p>
+<p class="text-on-surface font-serif text-lg md:text-xl font-medium tracking-tighter italic">境界の番人</p>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-1 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+</div>
+</div>
+<div class="group relative aspect-[3/4] bg-surface-container border border-outline-variant/30 hover:border-primary/50 transition-all duration-500">
+<div class="absolute inset-0 bg-[#0a0e14] flex flex-col items-center justify-center p-6 text-center space-y-4 overflow-hidden">
+<div class="relative w-24 h-24 mb-4">
+<span class="material-symbols-outlined text-6xl text-primary/20 absolute inset-0 flex items-center justify-center">policy</span>
+<span class="material-symbols-outlined text-4xl text-primary/40 absolute inset-0 flex items-center justify-center animate-pulse">fingerprint</span>
+</div>
+<div class="space-y-2">
+<p class="text-primary font-serif font-bold tracking-widest text-xs uppercase opacity-80">TOP SECRET</p>
+<p class="text-on-surface font-serif text-lg md:text-xl font-medium tracking-tighter italic">影の調整役</p>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-1 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+</div>
+</div>
+<div class="group relative aspect-[3/4] bg-surface-container border border-outline-variant/30 hover:border-primary/50 transition-all duration-500">
+<div class="absolute inset-0 bg-[#0a0e14] flex flex-col items-center justify-center p-6 text-center space-y-4">
+<span class="material-symbols-outlined text-6xl text-primary/20">gavel</span>
+<p class="text-primary font-serif font-bold tracking-widest text-xs uppercase opacity-80">CLASSIFIED</p>
+<p class="text-on-surface font-serif text-lg italic">断罪の刃</p>
+</div>
+</div>
+<div class="group relative aspect-[3/4] bg-surface-container border border-outline-variant/30 hover:border-primary/50 transition-all duration-500">
+<div class="absolute inset-0 bg-[#0a0e14] flex flex-col items-center justify-center p-6 text-center space-y-4">
+<span class="material-symbols-outlined text-6xl text-primary/20">history_edu</span>
+<p class="text-primary font-serif font-bold tracking-widest text-xs uppercase opacity-80">CLASSIFIED</p>
+<p class="text-on-surface font-serif text-lg italic">記録の守護者</p>
+</div>
+</div>
+<div class="group relative aspect-[3/4] bg-surface-container border border-outline-variant/30 hover:border-primary/50 transition-all duration-500">
+<div class="absolute inset-0 bg-[#0a0e14] flex flex-col items-center justify-center p-6 text-center space-y-4">
+<span class="material-symbols-outlined text-6xl text-primary/20">all_inclusive</span>
+<p class="text-primary font-serif font-bold tracking-widest text-xs uppercase opacity-80">CLASSIFIED</p>
+<p class="text-on-surface font-serif text-lg italic">永劫の理</p>
+</div>
+</div>
+<div class="group relative aspect-[3/4] bg-surface-container border border-outline-variant/30 hover:border-primary/50 transition-all duration-500">
+<div class="absolute inset-0 bg-[#0a0e14] flex flex-col items-center justify-center p-6 text-center space-y-4">
+<span class="material-symbols-outlined text-6xl text-primary/20">language</span>
+<p class="text-primary font-serif font-bold tracking-widest text-xs uppercase opacity-80">CLASSIFIED</p>
+<p class="text-on-surface font-serif text-lg italic">福音の伝道者</p>
+</div>
+</div>
+<div class="group relative aspect-[3/4] bg-surface-container border border-outline-variant/30 hover:border-primary/50 transition-all duration-500">
+<div class="absolute inset-0 bg-[#0a0e14] flex flex-col items-center justify-center p-6 text-center space-y-4">
+<span class="material-symbols-outlined text-6xl text-primary/20">auto_fix_high</span>
+<p class="text-primary font-serif font-bold tracking-widest text-xs uppercase opacity-80">CLASSIFIED</p>
+<p class="text-on-surface font-serif text-lg italic">錬成の魔術師</p>
+</div>
+</div>
+<div class="group relative aspect-[3/4] bg-surface-container border border-outline-variant/30 hover:border-primary/50 transition-all duration-500">
+<div class="absolute inset-0 bg-[#0a0e14] flex flex-col items-center justify-center p-6 text-center space-y-4">
+<span class="material-symbols-outlined text-6xl text-primary/20">castle</span>
+<p class="text-primary font-serif font-bold tracking-widest text-xs uppercase opacity-80">CLASSIFIED</p>
+<p class="text-on-surface font-serif text-lg italic">堅城の要塞</p>
+</div>
+</div>
+<div class="group relative aspect-[3/4] bg-surface-container border border-outline-variant/30 hover:border-primary/50 transition-all duration-500">
+<div class="absolute inset-0 bg-[#0a0e14] flex flex-col items-center justify-center p-6 text-center space-y-4">
+<span class="material-symbols-outlined text-6xl text-primary/20">psychology</span>
+<p class="text-primary font-serif font-bold tracking-widest text-xs uppercase opacity-80">CLASSIFIED</p>
+<p class="text-on-surface font-serif text-lg italic">深淵の読解者</p>
+</div>
+</div>
+<div class="group relative aspect-[3/4] bg-surface-container border border-outline-variant/30 hover:border-primary/50 transition-all duration-500">
+<div class="absolute inset-0 bg-[#0a0e14] flex flex-col items-center justify-center p-6 text-center space-y-4">
+<span class="material-symbols-outlined text-6xl text-primary/20">hub</span>
+<p class="text-primary font-serif font-bold tracking-widest text-xs uppercase opacity-80">CLASSIFIED</p>
+<p class="text-on-surface font-serif text-lg italic">繋ぎの連鎖</p>
+</div>
+</div>
+<div class="group relative aspect-[3/4] bg-surface-container border border-outline-variant/30 hover:border-primary/50 transition-all duration-500">
+<div class="absolute inset-0 bg-[#0a0e14] flex flex-col items-center justify-center p-6 text-center space-y-4">
+<span class="material-symbols-outlined text-6xl text-primary/20">star_half</span>
+<p class="text-primary font-serif font-bold tracking-widest text-xs uppercase opacity-80">CLASSIFIED</p>
+<p class="text-on-surface font-serif text-lg italic">黎明の星</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="py-32 px-6 text-center bg-surface relative">
+<div class="max-w-4xl mx-auto space-y-12">
+<h3 class="font-serif text-white text-4xl md:text-6xl lg:text-7xl italic leading-tight tracking-tight drop-shadow-2xl">
+                選ばれし15の魂。<br class="hidden md:block"/>その全てが揃う刻、世界は真の秩序を謳るであろう。
+            </h3>
+<div class="flex justify-center gap-8">
+<button class="bg-primary text-on-primary px-10 py-5 font-bold tracking-[0.2em] text-lg hover:brightness-110 transition-all shadow-2xl shadow-primary/20">
+                    入団を志願する
+                </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#181c22] w-full py-12 border-t border-[#e9c349]/10 flex flex-col items-center gap-8 text-center">
+<div class="text-[#e9c349] font-serif italic text-2xl">THE SOVEREIGN ORDER</div>
+<div class="flex gap-8 flex-wrap justify-center">
+<a class="text-[#c6c6c6] hover:text-[#e9c349] transition-all duration-300 uppercase text-xs font-bold tracking-[0.2em]" href="#">PRIVACY POLICY</a>
+<a class="text-[#c6c6c6] hover:text-[#e9c349] transition-all duration-300 uppercase text-xs font-bold tracking-[0.2em]" href="#">CODE OF CONDUCT</a>
+<a class="text-[#c6c6c6] hover:text-[#e9c349] transition-all duration-300 uppercase text-xs font-bold tracking-[0.2em]" href="#">TERMS OF SERVICE</a>
+</div>
+<div class="knights-line max-w-lg opacity-30"></div>
+<p class="font-sans text-xs tracking-tighter text-[#c6c6c6] opacity-60">
+        © 2024 THE SOVEREIGN ORDER. ALL RIGHTS RESERVED.
+    </p>
+</footer>
+</body></html>

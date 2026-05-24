@@ -1,0 +1,131 @@
+@theme {
+    --font-kog-headline: 'Noto Sans JP', ui-sans-serif, system-ui, sans-serif;
+    --font-kog-body: 'Noto Sans JP', ui-sans-serif, system-ui, sans-serif;
+
+    --color-kog-surface: #10141a;
+    --color-kog-on-surface: #dfe2eb;
+    --color-kog-on-surface-variant: #c5c6cd;
+    --color-kog-primary: #e9c349;
+    --color-kog-on-primary: #3c2f00;
+    --color-kog-secondary: #c6c6c6;
+    --color-kog-outline: #8f9097;
+    --color-kog-outline-variant: #44474d;
+    --color-kog-surface-container-low: #181c22;
+    --color-kog-surface-container: #1c2026;
+    --color-kog-surface-container-high: #262a31;
+    --color-kog-surface-container-lowest: #0a0e14;
+    --color-kog-background: #10141a;
+    --color-kog-primary-fixed-dim: #e9c349;
+    --color-kog-tertiary-fixed-dim: #b8c7e5;
+}
+
+@utility knight-line {
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        #e9c349 50%,
+        transparent 100%
+    );
+}
+
+@utility hero-gradient {
+    background: radial-gradient(
+        circle at center,
+        rgba(233, 195, 73, 0.15) 0%,
+        rgba(16, 20, 26, 0) 70%
+    );
+}
+
+.knights-site {
+    --radius: 0px;
+    font-family: 'Noto Sans JP', var(--font-kog-body);
+    color: var(--color-kog-on-surface);
+    background-color: var(--color-kog-background);
+}
+
+.knights-site .material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+}
+
+@utility writing-vertical {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+@utility text-glow {
+    text-shadow: 0 0 20px rgba(233, 195, 73, 0.5);
+}
+
+@utility light-ray {
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(
+        circle at center,
+        rgba(233, 195, 73, 0.05) 0%,
+        transparent 70%
+    );
+    transform: translate(-50%, -50%);
+    animation: kog-shimmer 8s infinite ease-in-out;
+}
+
+@utility glass-panel {
+    background: rgba(38, 42, 49, 0.8);
+    backdrop-filter: blur(20px);
+}
+
+@keyframes kog-float {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+}
+
+@keyframes kog-shimmer {
+    0% {
+        opacity: 0.1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}
+
+@keyframes kog-fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.knights-site .animate-fade-in-up {
+    animation: kog-fade-in-up 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.knights-site .kog-particle {
+    position: absolute;
+    background: #e9c349;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: kog-float 5s infinite linear;
+}
