@@ -1,5 +1,6 @@
 import { KnightLine } from '@/components/site/knight-line';
 import { KnightsHead } from '@/components/site/knights-head';
+import { SiteButton } from '@/components/site/site-button';
 import { SITE_ROUTES } from '@/config/site-navigation';
 import { KNIGHTS_IMAGES } from '@/constants/knights-images';
 import SiteLayout from '@/layouts/site-layout';
@@ -16,9 +17,7 @@ const CLASSIFIED_MEMBERS = [
     { icon: 'language', name: '福音の伝道者' },
     { icon: 'auto_fix_high', name: '錬成の魔術師' },
     { icon: 'castle', name: '堅城の要塞' },
-    { icon: 'psychology', name: '深淵の読解者' },
-    { icon: 'hub', name: '繋ぎの連鎖' },
-    { icon: 'star_half', name: '黎明の星' },
+    { icon: 'psychology', name: '深淵の読解者' }
 ] as const;
 
 function QuoteBlock({
@@ -283,12 +282,9 @@ export default function Members() {
                         <br className="hidden md:block" />
                         その全てが揃う刻、世界は真の秩序を謳うであろう。
                     </h3>
-                    <Link
-                        href={SITE_ROUTES.admission}
-                        className="inline-block bg-kog-primary px-10 py-5 text-lg font-bold tracking-[0.2em] text-kog-on-primary shadow-2xl shadow-kog-primary/20 transition-all hover:brightness-110"
-                    >
-                        入団を志願する
-                    </Link>
+                    <SiteButton asChild>
+                        <Link href={SITE_ROUTES.admission}>入団を志願する</Link>
+                    </SiteButton>
                 </div>
             </section>
         </SiteLayout>

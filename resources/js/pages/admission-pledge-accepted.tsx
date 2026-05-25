@@ -1,5 +1,6 @@
 import { KnightLine } from '@/components/site/knight-line';
 import { KnightsHead } from '@/components/site/knights-head';
+import { SiteButton } from '@/components/site/site-button';
 import { SITE_ROUTES } from '@/config/site-navigation';
 import { KNIGHTS_IMAGES } from '@/constants/knights-images';
 import SiteLayout from '@/layouts/site-layout';
@@ -79,15 +80,14 @@ export default function AdmissionPledgeAccepted({ reference }: Props) {
                     </div>
 
                     <div className="flex flex-col items-center gap-4">
-                        <Link
-                            href={SITE_ROUTES.home}
-                            className="group relative flex items-center gap-4 bg-kog-primary px-12 py-5 font-kog-headline text-sm font-bold tracking-[0.2em] text-kog-on-primary uppercase transition-all duration-300 hover:scale-105 active:scale-95"
-                        >
-                            神の騎士団の扉を閉じる
-                            <span className="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">
-                                arrow_forward
-                            </span>
-                        </Link>
+                        <SiteButton asChild size="sm" className="gap-4">
+                            <Link href={SITE_ROUTES.home}>
+                                神の騎士団の扉を閉じる
+                                <span className="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">
+                                    arrow_forward
+                                </span>
+                            </Link>
+                        </SiteButton>
                         <p className="mt-4 font-kog-body text-[9px] tracking-[0.3em] text-kog-on-surface-variant uppercase">
                             Safe Passage Guaranteed
                         </p>

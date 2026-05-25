@@ -2,6 +2,7 @@ import { Form } from '@inertiajs/react';
 import InputError from '@/components/input-error';
 import { KnightLine } from '@/components/site/knight-line';
 import { KnightsHead } from '@/components/site/knights-head';
+import { SiteButton } from '@/components/site/site-button';
 import { KNIGHTS_IMAGES } from '@/constants/knights-images';
 import SiteLayout from '@/layouts/site-layout';
 import { store as submitContact } from '@/routes/contact';
@@ -309,16 +310,19 @@ export default function Recruitment({ contactStatus }: Props) {
                                 </div>
 
                                 <div className="flex justify-center pt-8">
-                                    <button
+                                    <SiteButton
                                         type="submit"
+                                        size="sm"
                                         disabled={processing}
-                                        className="group relative overflow-hidden bg-kog-primary px-12 py-5 font-bold tracking-[0.3em] text-kog-on-primary uppercase transition-all hover:scale-[1.02] active:scale-95 disabled:cursor-not-allowed disabled:opacity-60"
+                                        className="hover:scale-[1.02]"
                                     >
                                         <span className="relative z-10">
-                                            {processing ? 'Sending...' : 'Send Message'}
+                                            {processing
+                                                ? 'Sending...'
+                                                : 'Send Message'}
                                         </span>
                                         <div className="absolute inset-0 translate-y-full bg-white/10 transition-transform duration-300 group-hover:translate-y-0" />
-                                    </button>
+                                    </SiteButton>
                                 </div>
                             </>
                         )}

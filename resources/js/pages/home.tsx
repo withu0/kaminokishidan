@@ -1,5 +1,6 @@
 import { KnightLine } from '@/components/site/knight-line';
 import { KnightsHead } from '@/components/site/knights-head';
+import { SiteButton } from '@/components/site/site-button';
 import { SITE_ROUTES } from '@/config/site-navigation';
 import { KNIGHTS_IMAGES } from '@/constants/knights-images';
 import SiteLayout from '@/layouts/site-layout';
@@ -62,18 +63,9 @@ export default function Home() {
                     </div>
 
                     <div className="mx-auto flex w-full max-w-[280px] flex-col gap-4 sm:max-w-md sm:flex-row sm:justify-center lg:max-w-none lg:gap-6">
-                        <Link
-                            href={SITE_ROUTES.oath}
-                            className="bg-kog-primary px-8 py-4 text-center font-bold tracking-widest text-kog-on-primary shadow-[0_0_20px_rgba(233,195,73,0.3)] transition-all duration-300 hover:scale-105 active:scale-95 lg:px-12 lg:py-5"
-                        >
-                            OUR OATH
-                        </Link>
-                        <Link
-                            href={SITE_ROUTES.business}
-                            className="border border-kog-outline-variant px-8 py-4 text-center font-bold tracking-widest text-kog-secondary transition-all duration-300 hover:bg-kog-surface-container-high active:scale-95 lg:px-12 lg:py-5"
-                        >
-                            LEARN MORE
-                        </Link>
+                        <SiteButton asChild size="lg">
+                            <Link href={SITE_ROUTES.oath}>我々の誓い</Link>
+                        </SiteButton>
                     </div>
                 </div>
             </section>
@@ -167,12 +159,11 @@ export default function Home() {
                             我らと共に、新しい時代を築く覚悟はあるか。求む、誇り高き志。
                         </p>
                     </div>
-                    <Link
-                        href={SITE_ROUTES.recruitment}
-                        className="inline-block w-full bg-kog-primary py-5 text-center font-bold tracking-[0.2em] text-kog-on-primary transition-all hover:brightness-110 active:scale-95 sm:mx-auto sm:max-w-md lg:max-w-lg lg:py-6"
-                    >
-                        RECRUITMENT 2026
-                    </Link>
+                    <SiteButton asChild size="full" className="lg:py-6">
+                        <Link href={SITE_ROUTES.recruitment}>
+                            RECRUITMENT 2026
+                        </Link>
+                    </SiteButton>
                 </div>
             </section>
         </SiteLayout>

@@ -1,4 +1,3 @@
-import { SiteBottomNav } from '@/components/site/site-bottom-nav';
 import { SiteFooter } from '@/components/site/site-footer';
 import { SiteHeader } from '@/components/site/site-header';
 import { useEffect, type ReactNode } from 'react';
@@ -29,9 +28,8 @@ export default function SiteLayout({ children }: SiteLayoutProps) {
     return (
         <div className="knights-site min-h-dvh overflow-x-hidden bg-kog-background font-kog-body text-kog-on-surface">
             <SiteHeader />
-            <main className="pt-16 pb-20 lg:pb-0">{children}</main>
+            <main className="pt-16">{children}</main>
             <SiteFooter />
-            <SiteBottomNav />
         </div>
     );
 }

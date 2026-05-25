@@ -1,5 +1,6 @@
 import { KnightLine } from '@/components/site/knight-line';
 import { KnightsHead } from '@/components/site/knights-head';
+import { SiteButton } from '@/components/site/site-button';
 import { SITE_ROUTES } from '@/config/site-navigation';
 import { KNIGHTS_IMAGES } from '@/constants/knights-images';
 import SiteLayout from '@/layouts/site-layout';
@@ -159,14 +160,13 @@ export default function Admission() {
                                 Remaining Slots:{' '}
                                 <span className="text-2xl font-bold">03</span>
                             </p>
-                            <Link
-                                href={SITE_ROUTES.members}
-                                className="group relative mt-8 inline-block overflow-hidden bg-kog-primary px-12 py-4 font-kog-headline text-lg font-bold tracking-[0.2em] text-kog-on-primary uppercase shadow-[0_0_15px_rgba(233,195,73,0.2)] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(233,195,73,0.4)] active:scale-95"
-                            >
-                                <span className="relative z-10">団室を訪問する</span>
-                                <div className="absolute inset-0 bg-white/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                                <div className="pointer-events-none absolute inset-px border border-white/20" />
-                            </Link>
+                            <SiteButton asChild className="mt-8 text-lg">
+                                <Link href={SITE_ROUTES.members}>
+                                    <span className="relative z-10">団室を訪問する</span>
+                                    <div className="absolute inset-0 bg-white/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                                    <div className="pointer-events-none absolute inset-px border border-white/20" />
+                                </Link>
+                            </SiteButton>
                         </div>
                     </div>
                 </div>
@@ -178,14 +178,13 @@ export default function Admission() {
                     <h3 className="mb-12 font-kog-headline text-3xl leading-tight italic md:text-5xl">
                         &quot;汝の野心は、この秩序を揺るがすに足るか&quot;
                     </h3>
-                    <Link
-                        href={SITE_ROUTES.admissionPledge}
-                        className="group relative inline-block overflow-hidden bg-kog-primary px-16 py-8 font-kog-headline text-xl font-bold tracking-[0.2em] text-kog-on-primary uppercase transition-all duration-300 hover:scale-105 active:scale-95"
-                    >
-                        <span className="relative z-10">誓約を立てる</span>
-                        <div className="absolute inset-0 bg-white/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                        <div className="pointer-events-none absolute inset-px border border-white/20" />
-                    </Link>
+                    <SiteButton asChild className="mt-8 text-lg">
+                        <Link href={SITE_ROUTES.admissionPledge}>
+                            <span className="relative z-10">誓約を立てる</span>
+                            <div className="absolute inset-0 bg-white/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                            <div className="pointer-events-none absolute inset-px border border-white/20" />
+                        </Link>
+                    </SiteButton>
                     <div className="mt-12 flex items-center justify-center gap-2 font-kog-body text-xs tracking-widest text-kog-primary/60 uppercase">
                         <span
                             className="material-symbols-outlined text-sm"

@@ -1,5 +1,6 @@
 import { KnightLine } from '@/components/site/knight-line';
 import { KnightsHead } from '@/components/site/knights-head';
+import { SiteButton } from '@/components/site/site-button';
 import { SITE_ROUTES } from '@/config/site-navigation';
 import { KNIGHTS_IMAGES } from '@/constants/knights-images';
 import SiteLayout from '@/layouts/site-layout';
@@ -86,12 +87,11 @@ export default function Business() {
                         株式会社神の騎士団は、現代の複雑なビジネスを紐解き、揺るぎない正義と他を圧倒する専門性を武器に、世界変革を起こす集団である。
                     </p>
                     <div className="animate-fade-in-up delay-500">
-                        <Link
-                            href={SITE_ROUTES.members}
-                            className="inline-block bg-kog-primary px-12 py-4 font-bold tracking-[0.15em] text-kog-on-primary shadow-[0_0_24px_rgba(233,195,73,0.45)] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_32px_rgba(233,195,73,0.55)] active:scale-95 md:px-16 md:py-5 md:text-lg"
-                        >
-                            騎士団の団室の扉を開ける
-                        </Link>
+                        <SiteButton asChild className="md:px-16 md:py-5 md:text-lg">
+                            <Link href={SITE_ROUTES.members}>
+                                騎士団の団室の扉を開ける
+                            </Link>
+                        </SiteButton>
                     </div>
                 </div>
 
@@ -314,12 +314,9 @@ export default function Business() {
                     <p className="mb-16 text-xl font-bold tracking-[0.2em] text-kog-on-primary opacity-90">
                         至難の課題こそ、神の騎士団がその真価を世界に示す時である。
                     </p>
-                    <Link
-                        href={SITE_ROUTES.admission}
-                        className="inline-block bg-kog-surface px-20 py-6 font-kog-headline text-2xl font-bold tracking-widest text-kog-on-surface shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-all hover:scale-105 active:scale-95"
-                    >
-                        聖約を結ぶ
-                    </Link>
+                    <SiteButton asChild variant="inverse" size="xl" className="px-20 text-2xl tracking-widest">
+                        <Link href={SITE_ROUTES.admission}>聖約を結ぶ</Link>
+                    </SiteButton>
                 </div>
             </section>
         </SiteLayout>

@@ -1,5 +1,6 @@
 import { KnightLine } from '@/components/site/knight-line';
 import { KnightsHead } from '@/components/site/knights-head';
+import { SiteButton } from '@/components/site/site-button';
 import { SITE_ROUTES } from '@/config/site-navigation';
 import { KNIGHTS_IMAGES } from '@/constants/knights-images';
 import SiteLayout from '@/layouts/site-layout';
@@ -238,24 +239,17 @@ export default function Company() {
                     &quot;Trust is the ultimate weapon.&quot;
                 </h2>
                 <div className="flex flex-col justify-center gap-4 sm:flex-row sm:gap-6">
-                    <Link
-                        href={SITE_ROUTES.members}
-                        className="bg-kog-primary px-10 py-4 font-bold tracking-widest text-kog-on-primary shadow-lg shadow-kog-primary/20 transition-all hover:scale-105"
-                    >
-                        団員を見る
-                    </Link>
-                    <Link
-                        href={SITE_ROUTES.recruitment}
-                        className="border border-kog-outline px-10 py-4 font-bold tracking-widest transition-all hover:bg-kog-surface-container-low"
-                    >
-                        採用サイトを見る
-                    </Link>
-                    <button
-                        type="button"
-                        className="border border-kog-outline px-10 py-4 font-bold tracking-widest transition-all hover:bg-kog-surface-container-low"
-                    >
+                    <SiteButton asChild>
+                        <Link href={SITE_ROUTES.members}>団員を見る</Link>
+                    </SiteButton>
+                    <SiteButton asChild variant="outline">
+                        <Link href={SITE_ROUTES.recruitment}>
+                            採用サイトを見る
+                        </Link>
+                    </SiteButton>
+                    <SiteButton type="button" variant="outline">
                         資料請求
-                    </button>
+                    </SiteButton>
                 </div>
             </section>
         </SiteLayout>

@@ -1,6 +1,7 @@
 import InputError from '@/components/input-error';
 import { KnightLine } from '@/components/site/knight-line';
 import { KnightsHead } from '@/components/site/knights-head';
+import { SiteButton } from '@/components/site/site-button';
 import { SITE_ROUTES } from '@/config/site-navigation';
 import SiteLayout from '@/layouts/site-layout';
 import { Form } from '@inertiajs/react';
@@ -119,10 +120,11 @@ export default function AdmissionPledge() {
                                             <br />
                                             この意志が揺らぐことなきよう、心して挑め。
                                         </p>
-                                        <button
+                                        <SiteButton
                                             type="submit"
+                                            size="full"
                                             disabled={processing}
-                                            className="group relative w-full overflow-hidden bg-kog-primary py-5 font-kog-headline text-sm font-bold tracking-[0.2em] text-kog-on-primary transition-all hover:scale-[1.01] hover:shadow-[0_0_30px_rgba(233,195,73,0.4)] active:scale-95 disabled:cursor-not-allowed disabled:opacity-60"
+                                            className="text-sm hover:scale-[1.01] hover:shadow-[0_0_30px_rgba(233,195,73,0.4)]"
                                         >
                                             <span className="relative z-10">
                                                 {processing
@@ -130,7 +132,7 @@ export default function AdmissionPledge() {
                                                     : '誓約書を提出する'}
                                             </span>
                                             <div className="absolute inset-0 translate-y-full bg-white/10 transition-transform duration-300 group-hover:translate-y-0" />
-                                        </button>
+                                        </SiteButton>
                                     </div>
                                 </>
                             )}
@@ -142,7 +144,7 @@ export default function AdmissionPledge() {
             <section className="relative overflow-hidden px-4 py-24 text-center">
                 <div className="mx-auto max-w-4xl">
                     <KnightLine className="mx-auto mb-12 w-32 opacity-50" />
-                    <h2 className="font-kog-headline text-3xl leading-relaxed font-bold tracking-[0.15em] text-white italic md:text-5xl">
+                    <h2 className="font-kog-headline text-3xl leading-relaxed font-bold text-white italic md:text-5xl">
                         聖なる契により新たな高みを登頂せよ
                     </h2>
                     <KnightLine className="mx-auto mt-12 w-32 opacity-50" />

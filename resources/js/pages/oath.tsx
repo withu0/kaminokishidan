@@ -1,5 +1,6 @@
 import { KnightLine } from '@/components/site/knight-line';
 import { KnightsHead } from '@/components/site/knights-head';
+import { SiteButton } from '@/components/site/site-button';
 import { SITE_ROUTES } from '@/config/site-navigation';
 import { KNIGHTS_IMAGES } from '@/constants/knights-images';
 import SiteLayout from '@/layouts/site-layout';
@@ -68,12 +69,9 @@ export default function Oath() {
                         <br />
                         現代社会の闇に、不変の光を灯すための挑戦を続ける。
                     </p>
-                    <Link
-                        href={SITE_ROUTES.admission}
-                        className="inline-block w-64 border-2 border-kog-primary bg-kog-primary py-4 text-lg font-bold text-kog-on-primary italic transition-all duration-300 hover:bg-transparent hover:text-kog-primary"
-                    >
-                        団員を志す
-                    </Link>
+                    <SiteButton asChild variant="outlineHero" className="w-64">
+                        <Link href={SITE_ROUTES.admission}>団員を志す</Link>
+                    </SiteButton>
                 </div>
                 <div className="absolute bottom-10 left-1/2 flex -translate-x-1/2 flex-col items-center gap-4 opacity-50">
                     <span className="font-kog-body text-xs tracking-[0.5em] uppercase">
@@ -141,12 +139,9 @@ export default function Oath() {
                         不確実な時代において、羅針盤となる存在であり続けること。それが「神の騎士団」としての誇りであり、存在意義である。我々は立ち止まることなく、常に最前線で価値を紡ぎ続ける。
                     </p>
                     <KnightLine className="mx-auto mb-16 max-w-md opacity-40" />
-                    <Link
-                        href={SITE_ROUTES.admission}
-                        className="inline-block px-16 py-6 text-xl font-bold tracking-[0.2em] text-kog-on-primary uppercase transition-all hover:shadow-[0_0_20px_rgba(233,195,73,0.3)] bg-kog-primary"
-                    >
-                        団員を志す
-                    </Link>
+                    <SiteButton asChild size="xl">
+                        <Link href={SITE_ROUTES.admission}>団員を志す</Link>
+                    </SiteButton>
                 </div>
             </section>
         </SiteLayout>
