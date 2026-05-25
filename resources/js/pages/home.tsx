@@ -1,6 +1,5 @@
 import { KnightLine } from '@/components/site/knight-line';
 import { KnightsHead } from '@/components/site/knights-head';
-import { SiteFooter } from '@/components/site/site-footer';
 import { SITE_ROUTES } from '@/config/site-navigation';
 import { KNIGHTS_IMAGES } from '@/constants/knights-images';
 import SiteLayout from '@/layouts/site-layout';
@@ -172,12 +171,10 @@ export default function Home() {
                         href={SITE_ROUTES.recruitment}
                         className="inline-block w-full bg-kog-primary py-5 text-center font-bold tracking-[0.2em] text-kog-on-primary transition-all hover:brightness-110 active:scale-95 sm:mx-auto sm:max-w-md lg:max-w-lg lg:py-6"
                     >
-                        RECRUITMENT 2024
+                        RECRUITMENT 2026
                     </Link>
                 </div>
             </section>
-
-            <SiteFooter />
         </SiteLayout>
     );
 }

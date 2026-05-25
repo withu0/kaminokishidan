@@ -2,7 +2,6 @@ import { Form } from '@inertiajs/react';
 import InputError from '@/components/input-error';
 import { KnightLine } from '@/components/site/knight-line';
 import { KnightsHead } from '@/components/site/knights-head';
-import { SiteFooter } from '@/components/site/site-footer';
 import { KNIGHTS_IMAGES } from '@/constants/knights-images';
 import SiteLayout from '@/layouts/site-layout';
 import { store as submitContact } from '@/routes/contact';
@@ -334,8 +333,6 @@ export default function Recruitment({ contactStatus }: Props) {
                     shield
                 </span>
             </section>
-
-            <SiteFooter variant="extended" />
         </SiteLayout>
     );
 }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdmissionPledgeController;
 use App\Http\Controllers\ContactController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -30,6 +31,14 @@ Route::get('/business', function () {
 Route::get('/admission', function () {
     return Inertia::render('admission');
 })->name('admission');
+
+Route::get('/admission/pledge', [AdmissionPledgeController::class, 'create'])
+    ->name('admission.pledge');
+Route::post('/admission/pledge', [AdmissionPledgeController::class, 'store'])
+    ->middleware('throttle:5,1')
+    ->name('admission.pledge.store');
+Route::get('/admission/pledge/accepted', [AdmissionPledgeController::class, 'accepted'])
+    ->name('admission.pledge.accepted');
 
 Route::get('/oath', function () {
     return Inertia::render('oath');

@@ -1,6 +1,5 @@
 import { KnightLine } from '@/components/site/knight-line';
 import { KnightsHead } from '@/components/site/knights-head';
-import { SiteFooter } from '@/components/site/site-footer';
 import { SITE_ROUTES } from '@/config/site-navigation';
 import { KNIGHTS_IMAGES } from '@/constants/knights-images';
 import SiteLayout from '@/layouts/site-layout';
@@ -259,8 +258,6 @@ export default function Company() {
                     </button>
                 </div>
             </section>
-
-            <SiteFooter variant="extended" />
         </SiteLayout>
     );
 }

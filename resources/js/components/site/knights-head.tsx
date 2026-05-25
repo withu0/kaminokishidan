@@ -16,11 +16,11 @@ export function KnightsHead({ title, children }: KnightsHeadProps) {
                 crossOrigin="anonymous"
             />
             <link
-                href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&display=swap"
+                href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Noto+Serif+JP:wght@500;600&display=swap"
                 rel="stylesheet"
             />
             <link
-                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0"
                 rel="stylesheet"
             />
             {children}

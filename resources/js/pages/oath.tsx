@@ -149,15 +149,6 @@ export default function Oath() {
                     </Link>
                 </div>
             </section>
-
-            <footer className="flex w-full flex-col items-center gap-8 border-t border-kog-primary/20 bg-kog-surface px-8 py-16">
-                <div className="mb-4 font-kog-headline text-xl font-bold tracking-tighter text-kog-primary uppercase">
-                    株式会社神の騎士団
-                </div>
-                <p className="mt-8 text-xs tracking-widest text-kog-secondary/40">
-                    © THE SOVEREIGN ORDER. ALL RIGHTS RESERVED.
-                </p>
-            </footer>
         </SiteLayout>
     );
 }

@@ -259,11 +259,11 @@ export default function Members() {
                                         </span>
                                     )}
                                     <div className="relative z-10 space-y-2">
-                                        {'label' in member && (
+                                        {/* {'label' in member && (
                                             <p className="font-kog-headline text-xs font-bold tracking-widest text-kog-primary uppercase opacity-80">
                                                 {member.label}
                                             </p>
-                                        )}
+                                        )} */}
                                         <p className="font-kog-headline text-lg font-medium tracking-tighter text-kog-on-surface italic md:text-xl">
                                             {member.name}
                                         </p>
@@ -291,29 +291,6 @@ export default function Members() {
                     </Link>
                 </div>
             </section>
-
-            <footer className="flex w-full flex-col items-center gap-8 border-t border-kog-primary/10 bg-kog-surface-container-low py-12 text-center">
-                <div className="font-kog-headline text-2xl text-kog-primary italic">
-                    THE SOVEREIGN ORDER
-                </div>
-                <div className="flex flex-wrap justify-center gap-8">
-                    {['PRIVACY POLICY', 'CODE OF CONDUCT', 'TERMS OF SERVICE'].map(
-                        (label) => (
-                            <a
-                                key={label}
-                                href="#"
-                                className="text-xs font-bold tracking-[0.2em] text-kog-secondary uppercase transition-all duration-300 hover:text-kog-primary"
-                            >
-                                {label}
-                            </a>
-                        ),
-                    )}
-                </div>
-                <KnightLine className="max-w-lg opacity-30" />
-                <p className="font-kog-body text-xs tracking-tighter text-kog-secondary opacity-60">
-                    © 2024 THE SOVEREIGN ORDER. ALL RIGHTS RESERVED.
-                </p>
-            </footer>
         </SiteLayout>
     );
 }

@@ -163,7 +163,7 @@ export default function Admission() {
                                 href={SITE_ROUTES.members}
                                 className="group relative mt-8 inline-block overflow-hidden bg-kog-primary px-12 py-4 font-kog-headline text-lg font-bold tracking-[0.2em] text-kog-on-primary uppercase shadow-[0_0_15px_rgba(233,195,73,0.2)] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(233,195,73,0.4)] active:scale-95"
                             >
-                                <span className="relative z-10">団長と副団長室</span>
+                                <span className="relative z-10">団室を訪問する</span>
                                 <div className="absolute inset-0 bg-white/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                                 <div className="pointer-events-none absolute inset-px border border-white/20" />
                             </Link>
@@ -179,7 +179,7 @@ export default function Admission() {
                         &quot;汝の野心は、この秩序を揺るがすに足るか&quot;
                     </h3>
                     <Link
-                        href={SITE_ROUTES.recruitment}
+                        href={SITE_ROUTES.admissionPledge}
                         className="group relative inline-block overflow-hidden bg-kog-primary px-16 py-8 font-kog-headline text-xl font-bold tracking-[0.2em] text-kog-on-primary uppercase transition-all duration-300 hover:scale-105 active:scale-95"
                     >
                         <span className="relative z-10">誓約を立てる</span>
@@ -197,30 +197,6 @@ export default function Admission() {
                     </div>
                 </div>
             </section>
-
-            <footer className="flex w-full flex-col items-center gap-8 border-t border-kog-primary/20 bg-kog-surface px-8 py-24 text-center">
-                <div className="font-kog-headline text-2xl tracking-widest text-kog-primary italic">
-                    The Sovereign Order
-                </div>
-                <div className="flex flex-wrap justify-center gap-8">
-                    {[
-                        'Privacy Covenant',
-                        'Terms of Service',
-                        'Contact the High Council',
-                    ].map((label) => (
-                        <a
-                            key={label}
-                            href="#"
-                            className="text-kog-secondary/60 transition-colors hover:text-kog-primary"
-                        >
-                            {label}
-                        </a>
-                    ))}
-                </div>
-                <p className="mt-4 text-kog-secondary/40">
-                    © MMXIV The Sovereign Authority. All Rights Reserved.
-                </p>
-            </footer>
         </SiteLayout>
     );
 }

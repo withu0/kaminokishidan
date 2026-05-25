@@ -1,6 +1,5 @@
 import { KnightLine } from '@/components/site/knight-line';
 import { KnightsHead } from '@/components/site/knights-head';
-import { SiteFooter } from '@/components/site/site-footer';
 import { SITE_ROUTES } from '@/config/site-navigation';
 import { KNIGHTS_IMAGES } from '@/constants/knights-images';
 import SiteLayout from '@/layouts/site-layout';
@@ -57,70 +56,53 @@ const STRENGTHS = [
     },
 ] as const;
 
-const PARTICLES = [
-    { className: 'kog-particle h-1 w-1 top-3/4 left-1/4', delay: '0s', duration: '4s' },
-    { className: 'kog-particle h-2 w-2 top-2/3 left-1/2', delay: '1s', duration: '6s' },
-    { className: 'kog-particle h-1 w-1 top-1/2 left-3/4', delay: '2s', duration: '5s' },
-    { className: 'kog-particle h-1 w-1 top-4/5 left-1/3', delay: '0.5s', duration: '7s' },
-] as const;
-
 export default function Business() {
     return (
         <SiteLayout>
             <KnightsHead title="事業案内 | 株式会社神の騎士団" />
 
-            <header className="relative flex min-h-screen items-center justify-center overflow-hidden pt-20">
-                <div className="absolute inset-0 z-0">
+            <header className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6">
+                <div className="absolute inset-0 z-0 bg-kog-surface">
                     <img
                         src={KNIGHTS_IMAGES.businessHero}
-                        alt="中世の石造ホールに差し込む金色の光"
-                        className="h-full w-full scale-105 object-cover opacity-30 contrast-125 grayscale"
+                        alt="鎧を纏う騎士のシルエット"
+                        className="h-full w-full object-cover object-center opacity-25 contrast-125 grayscale"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-b from-kog-surface via-transparent to-kog-surface" />
-                    <div className="light-ray" />
-                    <div className="pointer-events-none absolute inset-0 opacity-40">
-                        {PARTICLES.map((p) => (
-                            <div
-                                key={p.className}
-                                className={p.className}
-                                style={{
-                                    animationDelay: p.delay,
-                                    animationDuration: p.duration,
-                                }}
-                            />
-                        ))}
-                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-b from-kog-surface/90 via-kog-surface/40 to-kog-surface" />
                 </div>
 
-                <div className="relative z-10 max-w-6xl px-4 text-center">
-                    <span className="animate-fade-in-up mb-8 block text-sm font-bold tracking-[0.5em] text-kog-primary uppercase">
-                        Divine Order System
+                <div className="relative z-10 mx-auto max-w-5xl text-center">
+                    <span className="animate-fade-in-up mb-6 block font-kog-body text-xs font-bold tracking-[0.4em] text-kog-primary uppercase md:mb-8 md:text-sm md:tracking-[0.5em]">
+                        Our Sacred Mission
                     </span>
-                    <h1 className="animate-fade-in-up mb-10 font-kog-headline text-4xl leading-tight font-black tracking-tighter delay-200 md:text-6xl lg:text-9xl">
-                        叡智と勇気で、
+                    <h1 className="animate-fade-in-up mb-8 font-kog-headline text-4xl leading-tight font-black tracking-tight delay-200 md:mb-10 md:text-6xl lg:text-7xl xl:text-8xl">
+                        <span className="text-kog-on-surface">叡智と勇気で、</span>
                         <br />
                         <span className="text-glow text-kog-primary">
                             未来を護る。
                         </span>
                     </h1>
-                    <p className="animate-fade-in-up mx-auto max-w-4xl text-lg leading-relaxed font-medium tracking-wide text-kog-on-surface delay-500 md:text-xl">
-                        株式会社神の騎士団は、現代の複雑なビジネス領域を紐解き、揺るぎない正義と高度な専門能力を武器として、世界革命を起こす集団である。
+                    <p className="animate-fade-in-up mx-auto mb-12 max-w-3xl text-base leading-relaxed font-medium text-kog-on-surface delay-300 md:mb-14 md:text-lg">
+                        株式会社神の騎士団は、現代の複雑なビジネスを紐解き、揺るぎない正義と他を圧倒する専門性を武器に、世界変革を起こす集団である。
                     </p>
-                    <div className="animate-fade-in-up mt-16 flex flex-col items-center justify-center gap-8 delay-500 md:flex-row">
+                    <div className="animate-fade-in-up delay-500">
                         <Link
                             href={SITE_ROUTES.members}
-                            className="group relative overflow-hidden bg-kog-primary px-14 py-5 font-bold tracking-[0.2em] text-kog-on-primary shadow-2xl shadow-kog-primary/20 transition-all hover:scale-105"
+                            className="inline-block bg-kog-primary px-12 py-4 font-bold tracking-[0.15em] text-kog-on-primary shadow-[0_0_24px_rgba(233,195,73,0.45)] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_32px_rgba(233,195,73,0.55)] active:scale-95 md:px-16 md:py-5 md:text-lg"
                         >
-                            <span className="relative z-10">聖戦の記録を見る</span>
-                            <div className="absolute inset-0 -translate-x-full bg-white/10 transition-transform duration-500 group-hover:translate-x-0" />
-                        </Link>
-                        <Link
-                            href={SITE_ROUTES.oath}
-                            className="border border-kog-primary/30 px-14 py-5 font-bold tracking-[0.2em] text-kog-on-surface transition-all hover:bg-kog-primary/5"
-                        >
-                            我々の誓い
+                            騎士団の団室の扉を開ける
                         </Link>
                     </div>
+                </div>
+
+                <div
+                    className="absolute bottom-10 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-3 pb-[env(safe-area-inset-bottom)] lg:bottom-12"
+                    aria-hidden
+                >
+                    <span className="font-kog-body text-[10px] font-bold tracking-[0.35em] text-kog-primary uppercase md:text-xs">
+                        Scroll to Descend
+                    </span>
+                    <div className="h-14 w-px bg-kog-primary/80" />
                 </div>
             </header>
 
@@ -340,8 +322,6 @@ export default function Business() {
                     </Link>
                 </div>
             </section>
-
-            <SiteFooter variant="extended" />
         </SiteLayout>
     );
 }
