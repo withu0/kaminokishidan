@@ -18,7 +18,10 @@ export default function Admission() {
         <SiteLayout>
             <KnightsHead title="入隊の儀: 五つの聖約 | 株式会社神の騎士団" />
 
-            <section className="relative overflow-hidden pt-32 pb-24">
+            <section
+                id="fv"
+                className="relative flex max-h-[calc(100dvh-4rem)] min-h-[calc(100dvh-4rem)] flex-col overflow-hidden"
+            >
                 <div
                     className="absolute inset-0 z-0 bg-cover bg-center opacity-20"
                     style={{
@@ -26,27 +29,42 @@ export default function Admission() {
                     }}
                     aria-hidden
                 />
-                <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-start gap-12 px-6 md:grid-cols-12 md:px-8">
-                    <div className="md:col-span-8">
-                        <div className="mb-8 flex items-center gap-4">
-                            <div className="h-0.5 w-12 bg-kog-primary" />
-                            <span className="font-kog-body text-sm tracking-[0.3em] text-kog-primary uppercase">
-                                Sacred Protocol
-                            </span>
+                <div className="relative z-10 mx-auto flex w-full min-h-0 max-w-7xl flex-1 flex-col px-6 md:px-8">
+                    <div className="relative min-h-0 flex-1 pt-8 md:pt-12 lg:pt-16">
+                        <div className="max-w-2xl md:max-w-[calc(100%-12rem)] lg:max-w-3xl">
+                            <div className="mb-4 flex items-center gap-4 md:mb-6">
+                                <div className="h-0.5 w-12 bg-kog-primary" />
+                                <span className="font-kog-body text-sm tracking-[0.3em] text-kog-primary uppercase">
+                                    Sacred Protocol
+                                </span>
+                            </div>
+                            <h1 className="mb-4 font-kog-headline text-4xl leading-tight font-black md:mb-6 md:text-6xl lg:text-7xl xl:text-8xl">
+                                入隊の儀:
+                                <br />
+                                <span className="text-kog-primary">五つの聖約</span>
+                            </h1>
+                            <p className="text-base leading-relaxed text-kog-on-surface-variant md:text-lg lg:text-xl">
+                                主権なき世界において、真の卓越性を追求する者のみに許される「聖約」である。これらは単なる条件ではなく、我々の血脈に加わるための絶対的な誓約である。
+                            </p>
                         </div>
-                        <h1 className="mb-8 font-kog-headline text-4xl leading-tight font-black md:text-6xl lg:text-8xl">
-                            入隊の儀:
-                            <br />
-                            <span className="text-kog-primary">五つの聖約</span>
-                        </h1>
-                        <p className="max-w-2xl text-xl leading-relaxed text-kog-on-surface-variant">
-                            主権なき世界において、真の卓越性を追求する者のみに許される「聖約」である。これらは単なる条件ではなく、我々の血脈に加わるための絶対的な誓約である。
-                        </p>
+                        <div
+                            className="pointer-events-none absolute top-12 right-0 bottom-4 hidden justify-end md:flex"
+                            aria-hidden
+                        >
+                            <div className="writing-vertical h-full max-h-full border-r border-kog-primary/20 pr-4 font-kog-headline text-3xl tracking-[0.75em] text-kog-primary/40 select-none lg:text-4xl lg:tracking-[1em]">
+                                SOVEREIGN AUTHORITY
+                            </div>
+                        </div>
                     </div>
-                    <div className="flex items-start justify-end pt-12 md:col-span-4">
-                        <div className="writing-vertical pointer-events-none border-r border-kog-primary/20 pr-4 font-kog-headline text-4xl tracking-[1em] text-kog-primary/40 select-none">
-                            SOVEREIGN AUTHORITY
-                        </div>
+
+                    <div className="flex shrink-0 justify-center py-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] md:py-8">
+                        <SiteButton asChild className="text-lg">
+                            <Link href={SITE_ROUTES.admissionPledge}>
+                                <span className="relative z-10">誓約を立てる</span>
+                                <div className="absolute inset-0 bg-white/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                                <div className="pointer-events-none absolute inset-px border border-white/20" />
+                            </Link>
+                        </SiteButton>
                     </div>
                 </div>
             </section>

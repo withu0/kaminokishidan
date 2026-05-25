@@ -62,21 +62,25 @@ export default function Home() {
                     <div className="hero-gradient absolute inset-0" />
                 </div>
 
-                <div className="relative z-10 mx-auto w-full max-w-4xl space-y-8 text-center lg:max-w-5xl lg:space-y-12">
-                    <div className="space-y-4 lg:space-y-6">
-                        <span className="block font-kog-body text-xs tracking-[0.3em] text-kog-primary uppercase">
-                            Eternity &amp; Sovereignty
+                <div className="relative z-10 mx-auto max-w-5xl text-center">
+                    <span className="animate-fade-in-up mb-6 block font-kog-body text-xs font-bold tracking-[0.4em] text-kog-primary uppercase md:mb-8 md:text-sm md:tracking-[0.5em]">
+                        Our Sacred Mission
+                    </span>
+                    <h1 className="animate-fade-in-up mb-8 font-kog-headline text-4xl leading-tight font-black tracking-tight delay-200 md:mb-10 md:text-6xl lg:text-7xl xl:text-8xl">
+                        <span className="text-kog-on-surface">叡智と勇気で、</span>
+                        <br />
+                        <span className="text-glow text-kog-primary">
+                            未来を護る。
                         </span>
-                        <h1 className="font-kog-headline text-4xl leading-tight font-bold tracking-[0.05em] text-kog-on-surface md:text-5xl lg:text-6xl xl:text-7xl">
-                            高潔なる意志、
-                            <br />
-                            永劫の使命。
-                        </h1>
-                    </div>
-
-                    <div className="mx-auto flex w-full max-w-[280px] flex-col gap-4 sm:max-w-md sm:flex-row sm:justify-center lg:max-w-none lg:gap-6">
-                        <SiteButton asChild size="lg">
-                            <Link href={SITE_ROUTES.oath}>我々の誓い</Link>
+                    </h1>
+                    <p className="animate-fade-in-up mx-auto mb-12 max-w-3xl text-base leading-relaxed font-medium text-kog-on-surface delay-300 md:mb-14 md:text-lg">
+                        株式会社神の騎士団は、現代の複雑なビジネスを紐解き、揺るぎない正義と他を圧倒する専門性を武器に、世界変革を起こす集団である。
+                    </p>
+                    <div className="animate-fade-in-up delay-500">
+                        <SiteButton asChild className="md:px-16 md:py-5 md:text-lg">
+                            <Link href={SITE_ROUTES.oath}>
+                                騎士団の団室の扉を開ける
+                            </Link>
                         </SiteButton>
                     </div>
                 </div>
