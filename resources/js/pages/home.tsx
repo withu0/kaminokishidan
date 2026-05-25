@@ -5,6 +5,7 @@ import { SITE_ROUTES } from '@/config/site-navigation';
 import { KNIGHTS_IMAGES } from '@/constants/knights-images';
 import SiteLayout from '@/layouts/site-layout';
 import { Link } from '@inertiajs/react';
+import { useEffect } from 'react';
 
 const DOMAINS = [
     {
@@ -34,12 +35,23 @@ const DOMAINS = [
 ] as const;
 
 export default function Home() {
+    useEffect(() => {
+        if (window.location.hash !== '#fv') {
+            return;
+        }
+
+        document.getElementById('fv')?.scrollIntoView({ behavior: 'smooth' });
+    }, []);
+
     return (
         <SiteLayout>
             <KnightsHead title="株式会社神の騎士団" />
 
             {/* Hero */}
-            <section className="relative flex min-h-[min(795px,90dvh)] flex-col items-center justify-center overflow-hidden px-6 lg:min-h-screen lg:px-10">
+            <section
+                id="fv"
+                className="relative flex min-h-[min(795px,90dvh)] flex-col items-center justify-center overflow-hidden px-6 lg:min-h-screen lg:px-10"
+            >
                 <div className="absolute inset-0 z-0">
                     <img
                         src={KNIGHTS_IMAGES.hero}

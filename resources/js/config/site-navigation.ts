@@ -1,5 +1,6 @@
 export const SITE_ROUTES = {
     home: '/',
+    homeFv: '/#fv',
     business: '/business',
     company: '/company',
     recruitment: '/recruitment',
