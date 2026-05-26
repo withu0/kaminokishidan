@@ -102,7 +102,7 @@ export default function AdmissionPledge() {
                                         label="連絡先アドレス"
                                         labelEn="Contact Email"
                                         type="email"
-                                        placeholder="oracle@order.com"
+                                        placeholder="member@kaminokishidan.jp"
                                         error={errors.email}
                                     />
                                     <PledgeField

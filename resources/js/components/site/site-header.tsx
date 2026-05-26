@@ -10,12 +10,14 @@ export function SiteHeader() {
                     className="flex items-center gap-3 text-kog-primary transition-opacity hover:opacity-90 active:opacity-80"
                     aria-label="株式会社神の騎士団 — ホーム"
                 >
-                    <span
-                        className="material-symbols-filled shrink-0 text-[1.75rem] lg:text-[2rem]"
+                    <img
+                        src="/favicon-96x96.png"
+                        alt=""
+                        width={40}
+                        height={40}
+                        className="h-9 w-9 shrink-0 object-contain lg:h-10 lg:w-10"
                         aria-hidden
-                    >
-                        shield
-                    </span>
+                    />
                     <div className="flex flex-col items-start gap-0.5 leading-none">
 
                         <span className="font-['Noto_Serif_JP',serif] text-[0.95rem] font-medium tracking-wide md:text-base lg:text-lg">

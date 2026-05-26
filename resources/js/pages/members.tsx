@@ -7,17 +7,12 @@ import SiteLayout from '@/layouts/site-layout';
 import { Link } from '@inertiajs/react';
 
 const CLASSIFIED_MEMBERS = [
-    { icon: 'shield', overlay: 'lock', label: 'CLASSIFIED', name: '秘匿された魂' },
-    { icon: 'person_off', overlay: 'visibility_off', label: 'SECRET', name: '静寂の執行者' },
-    { icon: 'security', overlay: 'key', label: 'CLASSIFIED', name: '境界の番人' },
-    { icon: 'policy', overlay: 'fingerprint', label: 'TOP SECRET', name: '影の調整役' },
-    { icon: 'gavel', name: '断罪の刃' },
-    { icon: 'history_edu', name: '記録の守護者' },
-    { icon: 'all_inclusive', name: '永劫の理' },
-    { icon: 'language', name: '福音の伝道者' },
-    { icon: 'auto_fix_high', name: '錬成の魔術師' },
-    { icon: 'castle', name: '堅城の要塞' },
-    { icon: 'psychology', name: '深淵の読解者' }
+    { icon: 'shield', overlay: 'lock', label: 'CLASSIFIED', rank: '第一隊長 / PAULDRON' },
+    { icon: 'person_off', overlay: 'visibility_off', label: 'SECRET', rank: '第二隊長 / HELMET' },
+    { icon: 'security', overlay: 'key', label: 'CLASSIFIED', rank: '迎撃隊長 / SABATON' },
+    { icon: 'policy', rank: '近衛騎士 / GAUNTLET' },
+    { icon: 'gavel', rank: '正騎士 / BELT' },
+    { icon: 'history_edu', rank: '従騎士 / GORGET' },
 ] as const;
 
 function QuoteBlock({
@@ -165,7 +160,7 @@ export default function Members() {
                     <div className="w-full space-y-12 lg:w-1/2">
                         <div>
                             <p className="mb-2 font-kog-headline text-2xl font-bold text-kog-primary">
-                                リーダー / THE STRATEGIST
+                                総隊長 / THE CUIRASS
                             </p>
                             <h2 className="mb-4 font-kog-headline text-5xl leading-none font-bold tracking-tighter md:text-6xl">
                                 ライス・フィールド
@@ -205,7 +200,7 @@ export default function Members() {
                     <div className="w-full space-y-10 lg:w-3/5">
                         <div className="space-y-2">
                             <p className="font-kog-headline text-2xl font-bold tracking-widest text-kog-primary">
-                                鼓笛隊 / THE DRUMMER
+                                親衛隊長 / THE GREEVE
                             </p>
                             <h2 className="font-kog-headline text-5xl font-bold md:text-7xl">
                                 ププ
@@ -236,10 +231,10 @@ export default function Members() {
                         </h3>
                         <KnightLine className="mx-auto max-w-md opacity-50" />
                     </div>
-                    <div className="grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8 lg:gap-10">
+                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:gap-10">
                         {CLASSIFIED_MEMBERS.map((member) => (
                             <div
-                                key={member.name}
+                                key={member.rank}
                                 className="group relative aspect-[3/4] border border-kog-outline-variant/30 bg-kog-surface-container transition-all duration-500 hover:border-kog-primary/50"
                             >
                                 <div className="absolute inset-0 flex flex-col items-center justify-center space-y-4 overflow-hidden bg-kog-surface-container-lowest p-6 text-center">
@@ -264,7 +259,7 @@ export default function Members() {
                                             </p>
                                         )} */}
                                         <p className="font-kog-headline text-lg font-medium tracking-tighter text-kog-on-surface italic md:text-xl">
-                                            {member.name}
+                                            {member.rank}
                                         </p>
                                     </div>
                                     <div className="absolute bottom-0 left-0 h-1 w-full origin-left scale-x-0 bg-kog-primary transition-transform duration-500 group-hover:scale-x-100" />
@@ -278,7 +273,7 @@ export default function Members() {
             <section className="relative bg-kog-surface px-6 py-32 text-center">
                 <div className="mx-auto max-w-4xl space-y-12">
                     <h3 className="font-kog-headline text-3xl leading-tight tracking-tight drop-shadow-2xl md:text-5xl lg:text-7xl">
-                        選ばれし15の魂。
+                        選ばれし10の魂。
                         <br className="hidden md:block" />
                         その全てが揃う刻、世界は真の秩序を謳うであろう。
                     </h3>

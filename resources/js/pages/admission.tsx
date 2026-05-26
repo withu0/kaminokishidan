@@ -7,10 +7,12 @@ import SiteLayout from '@/layouts/site-layout';
 import { Link } from '@inertiajs/react';
 
 const SKILL_AREAS = [
-    'Sales & Marketing',
-    'Engineering',
-    'Analytics',
-    'Back-office Architecture',
+    '超人を圧倒する営業成績',
+    '市場を席捲するマーケティング力',
+    '機械を超越するエンジニアリング力',
+    '人を魅力する人間力',
+    '未来を見通すアナリティクス力',
+    '先を見据えるバックオフィス力'
 ] as const;
 
 export default function Admission() {
@@ -57,13 +59,17 @@ export default function Admission() {
                         </div>
                     </div>
 
-                    <div className="flex shrink-0 justify-center py-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] md:py-8">
-                        <SiteButton asChild className="text-lg">
-                            <Link href={SITE_ROUTES.admissionPledge}>
-                                <span className="relative z-10">誓約を立てる</span>
-                                <div className="absolute inset-0 bg-white/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                                <div className="pointer-events-none absolute inset-px border border-white/20" />
-                            </Link>
+                    <div className="flex shrink-0 flex-col gap-4 py-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] sm:flex-row sm:items-center sm:gap-5 md:py-8">
+                        <SiteButton
+                            asChild
+                            variant="outline"
+                            size="lg"
+                            className="w-full sm:w-auto"
+                        >
+                            <Link href={SITE_ROUTES.members}>団室を訪問する</Link>
+                        </SiteButton>
+                        <SiteButton asChild size="lg" className="w-full sm:w-auto">
+                            <Link href={SITE_ROUTES.admissionPledge}>誓約を立てる</Link>
                         </SiteButton>
                     </div>
                 </div>
@@ -79,11 +85,12 @@ export default function Admission() {
                                 I
                             </span>
                             <h2 className="mb-6 font-kog-headline text-3xl">
-                                月額100万円の団員費
+                                月1回団議への参加と忠誠
                             </h2>
                             <p className="mb-8 font-kog-body text-lg leading-relaxed text-kog-on-surface-variant">
-                                Contribution of 5 million yen per month.
-                                これは富の誇示ではない。我々が創造する「世界を変えるプロダクト」への絶対的な資源投下と、退路を断つ覚悟の証明である。
+                                Dedicate your hearts.「心臓を捧げよ。」新たな取り組みに積極的に参加し、<br />
+                                我々が創造する「世界を変えるプロダクト」への絶対的な資源投下と、<br />
+                                退路を断つ覚悟を証明せよ。
                             </p>
                             <div className="relative h-64 overflow-hidden grayscale transition-all duration-700 group-hover:grayscale-0">
                                 <img
@@ -101,7 +108,7 @@ export default function Admission() {
                                 II
                             </span>
                             <h2 className="mb-6 font-kog-headline text-3xl">
-                                三十代前半の指導者
+                                三十代の指導者
                             </h2>
                             <p className="leading-relaxed text-kog-on-surface-variant">
                                 Limited to business leaders in their 30s.
@@ -165,10 +172,10 @@ export default function Admission() {
                                 V
                             </span>
                             <h2 className="mb-6 font-kog-headline text-4xl">
-                                限定十五名の定員
+                                限定10名の定員
                             </h2>
                             <p className="mb-4 text-xl leading-relaxed text-kog-on-surface-variant">
-                                Recruitment ends once 15 members are reached.
+                                Recruitment ends once 10 members are reached.
                                 定員充足と同時に、一切の門戸を閉鎖する。
                             </p>
                             <p className="mb-4 text-xl leading-relaxed text-kog-on-surface-variant">
