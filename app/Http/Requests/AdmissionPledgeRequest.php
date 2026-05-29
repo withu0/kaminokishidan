@@ -27,6 +27,7 @@ class AdmissionPledgeRequest extends FormRequest
             'company' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255'],
             'phone' => ['required', 'string', 'max:50'],
+            'message' => ['required', 'string', 'max:5000'],
         ];
     }
 
@@ -40,6 +41,7 @@ class AdmissionPledgeRequest extends FormRequest
             'company' => '貴社名',
             'email' => '連絡先アドレス',
             'phone' => '電話番号',
+            'message' => '汝の声の詳細',
         ];
     }
 }

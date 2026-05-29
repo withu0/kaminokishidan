@@ -44,7 +44,47 @@ function PledgeField({
     );
 }
 
-export default function AdmissionPledge() {
+function PledgeTextarea({
+    id,
+    label,
+    labelEn,
+    placeholder,
+    error,
+}: {
+    id: string;
+    label: string;
+    labelEn: string;
+    placeholder: string;
+    error?: string;
+}) {
+    return (
+        <div className="group relative">
+            <label
+                htmlFor={id}
+                className="mb-3 block text-xs font-bold tracking-[0.2em] text-kog-primary uppercase transition-colors group-focus-within:text-white"
+            >
+                {label}{' '}
+                <span className="text-kog-primary/50">({labelEn})</span>
+            </label>
+            <textarea
+                id={id}
+                name={id}
+                required
+                rows={6}
+                placeholder={placeholder}
+                className="w-full border-b border-kog-primary/20 bg-kog-surface-container-lowest p-4 text-kog-on-surface transition-all placeholder:text-kog-on-surface-variant/30 focus:border-kog-primary focus:ring-0"
+            />
+            <div className="absolute bottom-0 left-0 h-px w-0 bg-kog-primary transition-all duration-500 group-focus-within:w-full" />
+            <InputError message={error} className="mt-2" />
+        </div>
+    );
+}
+
+type Props = {
+    pledgeStatus?: 'error';
+};
+
+export default function AdmissionPledge({ pledgeStatus }: Props) {
     return (
         <SiteLayout>
             <KnightsHead title="聖なる面談の申し込み | 株式会社神の騎士団" />
@@ -72,6 +112,15 @@ export default function AdmissionPledge() {
                     <div className="glass-panel relative border border-kog-primary/20 p-8 shadow-2xl md:p-12">
                         <div className="absolute top-0 left-0 h-8 w-8 border-t-2 border-l-2 border-kog-primary/40" />
                         <div className="absolute right-0 bottom-0 h-8 w-8 border-r-2 border-b-2 border-kog-primary/40" />
+
+                        {pledgeStatus === 'error' && (
+                            <p
+                                role="alert"
+                                className="mb-8 border border-red-500/30 bg-red-500/10 px-6 py-4 text-center text-sm text-red-200"
+                            >
+                                送信に失敗しました。時間をおいて再度お試しください。
+                            </p>
+                        )}
 
                         <Form
                             action={SITE_ROUTES.admissionPledge}
@@ -112,6 +161,13 @@ export default function AdmissionPledge() {
                                         type="tel"
                                         placeholder="000-0000-0000"
                                         error={errors.phone}
+                                    />
+                                    <PledgeTextarea
+                                        id="message"
+                                        label="汝の声の詳細"
+                                        labelEn="Your Message"
+                                        placeholder="汝の願い、想い、問いを記せ"
+                                        error={errors.message}
                                     />
 
                                     <div className="pt-8">

@@ -128,4 +128,17 @@ return [
         'to' => env('MAIL_CONTACT_TO', env('MAIL_FROM_ADDRESS', 'hello@example.com')),
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Admission Pledge Form Recipient
+    |--------------------------------------------------------------------------
+    |
+    | Sacred interview applications are delivered to this address.
+    |
+    */
+
+    'admission_pledge' => [
+        'to' => env('MAIL_ADMISSION_PLEDGE_TO', env('MAIL_CONTACT_TO', env('MAIL_FROM_ADDRESS', 'hello@example.com'))),
+    ],
+
 ];
